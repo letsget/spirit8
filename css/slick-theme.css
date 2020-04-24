@@ -1,0 +1,273 @@
+@charset 'UTF-8';
+/* Slider */
+.slick-loading .slick-list
+{
+    background: #fff url('./ajax-loader.gif') center center no-repeat;
+}
+
+/* Icons */
+
+/* Arrows */
+
+.gallery {
+    position: relative;
+}
+
+.arrow-next {
+  display: block;
+  position: absolute;
+  top: calc(50% - 100px / 2);
+  right: -150px;
+  width: 100px;
+  height: 100px;
+  background-image: url(../images/next.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 50px;
+  cursor: pointer;
+  transition: all ease 0.5s;
+ 
+}
+
+.arrow-back {
+  display: block;
+  position: absolute;
+  top: calc(50% - 100px / 2);
+  left: -150px;
+  width: 100px;
+  height: 100px;
+  background-image: url(../images/back.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 50px;
+  cursor: pointer;
+  transition: all ease 0.5s;
+}
+
+.arrow-next:active,
+.arrow-back:active
+ {
+  transform: translateX(10px);
+}
+
+.members-gallery .slick-dots
+{
+    position: absolute;
+    bottom: -40px;
+    display: block;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    text-align: center;
+}
+
+.next,
+.prev
+{
+ 
+  position: absolute;
+  font-size: 40px;
+  color: #fff;
+  top: 50%;
+  z-index: 1;
+  transition: all ease 0.3s
+}
+
+
+.prev:active
+{
+    transform: translateX(-2px);
+}  
+
+.next:active {
+     transform: translateX(2px);
+}
+
+.prev:after {
+    content: '';
+    position: absolute;
+    width: 50px;
+    right: -16px;
+    height: 810px;
+    top: -405px;
+    z-index: -10;
+    transition: all ease 0.5s;
+    }
+
+.next:after {
+    content: '';
+    position: absolute;
+    width: 50px;
+    right: -20px;
+    height: 810px;
+    top: -405px;
+    z-index: -10;
+    transition: all ease 0.5s;
+}
+
+ .next:hover:after,
+ .prev:hover:after {
+    background: rgba(1,1,1,0.3);
+ }
+
+
+.prev {
+    left: 20px;
+}
+
+.next {
+    right: 20px;
+}
+
+.next:hover,
+.prev:hover
+{
+    cursor: pointer;
+}
+
+
+/*
+.slick-prev:hover,
+.slick-prev:focus,
+.slick-next:hover,
+.slick-next:focus
+{
+    color: transparent;
+    outline: none;
+    background: transparent;
+}
+.slick-prev:hover:before,
+.slick-prev:focus:before,
+.slick-next:hover:before,
+.slick-next:focus:before
+{
+    opacity: 1;
+}
+.slick-prev.slick-disabled:before,
+.slick-next.slick-disabled:before
+{
+    opacity: .25;
+}
+
+/*
+.slick-prev:before,
+.slick-next:before
+{
+    font-family: 'slick';
+    font-size: 20px;
+    line-height: 1;
+
+    opacity: .75;
+    color: white;
+
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.slick-prev
+{
+    left: -25px;
+}
+[dir='rtl'] .slick-prev
+{
+    right: -25px;
+    left: auto;
+}
+.slick-prev:before
+{
+    content: '←';
+}
+[dir='rtl'] .slick-prev:before
+{
+    content: '→';
+}
+
+.slick-next
+{
+    right: -25px;
+}
+[dir='rtl'] .slick-next
+{
+    right: auto;
+    left: -25px;
+}
+.slick-next:before
+{
+    content: '→';
+}
+[dir='rtl'] .slick-next:before
+{
+    content: '←';
+}
+
+/* Dots */
+
+
+.slick-dotted.slick-slider
+{
+  
+}
+
+.slick-dots
+{
+    position: absolute;
+    bottom: -90px;
+    display: block;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    text-align: center;
+}
+.slick-dots li
+{
+    position: relative;
+
+    display: inline-block;
+
+    width: 20px;
+    height: 20px;
+    margin: 0 5px;
+    padding: 0;
+
+    cursor: pointer;
+}
+.slick-dots li button
+{
+    content: '';
+    width: 10px;
+    height: 10px;
+    background: #fcac45;
+    position: absolute;
+    border-radius: 50%;
+    cursor: pointer;
+    color: transparent;
+    border: 0;
+    padding: 0;
+    outline: none;
+}
+
+.slick-dots li button:focus {
+    background: #b37b33;;
+}
+
+.slick-dots li button:hover,
+.slick-dots li button:focus
+{
+    outline: none;
+}
+.slick-dots li button:hover:before,
+.slick-dots li button:focus:before
+{
+    opacity: 1;
+}
+.slick-dots li button:before
+{
+
+}
+.slick-dots li.slick-active button:before
+{
+    opacity: .75;
+    color: black;
+}
